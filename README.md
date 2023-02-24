@@ -14,9 +14,9 @@ Work through the following challenges in sequence.
 
 This phase will help you get "just enough"  understanding of how JavaScript is run in a web browser.
 
-1. [Running JavaScript in the browser](./javascript_bites/1_running_js_in_browser.md)
-2. [Getting visibility](./javascript_bites/2_getting_visibility_ed.md)
-3. [Sending HTTP requests](./javascript_bites/3_sending_http_requests.md)
+1. [Running JavaScript in the browser](./javascript_bites/01_running_js_in_browser.md)
+2. [Getting visibility](./javascript_bites/02_getting_visibility_ed.md)
+3. [Sending HTTP requests](./javascript_bites/03_sending_http_requests.md)
 
 <!-- OMITTED -->
 
@@ -24,22 +24,22 @@ This phase will help you get "just enough"  understanding of how JavaScript is r
 
 This phase will help you get "just enough"  understanding on how JavaScript can be used to dynamically update an HTML document.
 
-1. [HTML pages](./webpages/1_html_pages.md)
-2. [Manipulating the DOM](./webpages/2_manipulating_the_dom.md)
-3. [Event listeners](./webpages/3_event_listeners.md)
+1. [HTML pages](./webpages/01_html_pages.md)
+2. [Manipulating the DOM](./webpages/02_manipulating_the_dom.md)
+3. [Event listeners](./webpages/03_event_listeners.md)
 
 ### Phase 3 - React
 
 This phase will help you to learn how to test-drive simple React components, and to get a basic mental model of how React works.
 
-1. [Setting up a React project](./react/1_setting_up_project.md)
-2. [Components](./react/2_components.md)
-3. [Props](./react/3_props.md)
-4. [Testing components](./react/4_testing_components.md)
-5. [State](./react/5_state.md)
-6. [Forms](./react/6_forms.md)
-7. [Sharing state](./react/7_sharing_state.md)
-8. [Effects](./react/8_effects.md)
+1. [Setting up a React project](./react/01_setting_up_project.md)
+2. [Components](./react/02_components.md)
+3. [Props](./react/03_props.md)
+4. [Testing components](./react/04_testing_components.md)
+5. [State](./react/05_state.md)
+6. [Forms](./react/06_forms.md)
+7. [Sharing state](./react/07_sharing_state.md)
+8. [Effects](./react/08_effects.md)
 
 ### Phase 3 - Advanced React
 
