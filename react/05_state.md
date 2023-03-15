@@ -8,7 +8,13 @@ At the end of this section you should be able to:
  * Use the `useState()` hook to add state to a component
  * Test-drive a component with state
 
-Sometimes we want a component to "remember" some state.
+## On state
+
+So far our components are "static" — once they are rendered with some props, they won't update (unless we reload the entire application).
+
+By adding state to a component, it can then "change" dynamically the way it looks (or the way it's been rendered), depending on how its state changes.
+
+A trivial example is a component to show a counter — it starts by displaying an initial value of 0, but then can change to display increasing values.
 
 ## Creating state
 
@@ -57,6 +63,12 @@ const Counter = () => {
 
 When the user clicks the button, `setCount` is called with the new state value. React re-renders the component, "remembering" the new `count` value, and returning the HTML including this new value.
 
+## Re-rendering
+
+When the state is updated, React will "know" it needs to re-render the component again, to make the page look like it should.
+
+In the example of the Counter, when we update the value from 0 to 1 using `setCount()`, React then "knows" it needs to re-render (call) the component, as the value of `count` has changed.
+
 ## Exercise
 
 Implement the `Counter` component in your project. Use the React DevTools to inspect the state of this component changing as you manually increment the counter on the web page.
@@ -65,14 +77,50 @@ Implement the `Counter` component in your project. Use the React DevTools to ins
 
 @TODO
 
+Testing a component with state follows the same principles. The only difference is that we will usually simulate a user action — for example, clicking on a button. This user action changes the state of the component, and we test that the component has changed.
+
+```js
+// file: src/Counter.test.js
+
+import React from 'react'
+import {render, screen} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import '@testing-library/jest-dom'
+import Counter from './Counter'
+
+test('renders with initial value of 0 ', () => {
+    // Setup
+    render(<Counter />)
+
+    // Assert
+    expect(screen.getByRole("heading")).toHaveTextContent('0')
+});
+
+test('renders with a new value of 2 ', async () => {
+    // Setup
+    render(<Counter />)
+
+    // Act - click the button twice
+    await userEvent.click(screen.getByText('Increment'))
+    await userEvent.click(screen.getByText('Increment'))
+
+    // Assert
+    expect(screen.getByRole("heading")).toHaveTextContent('2')
+});
+```
+
+@TODO why did we have to use `async` and `await`?
+
 ## Exercise
 
 Test-drive the component `Counter` with a new button to **decrement** the counter.
 
 ## Challenge
 
-Test-drive a component with state.
+@TODO Test-drive a component with state.
 
+
+------
 
 ## Advanced - Breaking it down 
 

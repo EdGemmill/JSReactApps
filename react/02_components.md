@@ -85,6 +85,9 @@ own file.
 ```jsx
 // file: src/Post.js
 
+// We always need to import React when declaring a component
+import React from "react";
+
 const Post = () => {
 
     return (
@@ -101,10 +104,10 @@ export default Post
 It can be then imported and added to the root component (`App`):
 
 ```js
-// file: App.js
+// file: src/App.js
 
 import React from "react";
-import Post from "./src/Post";
+import Post from "./Post";
 
 const App = () =>{
     return (

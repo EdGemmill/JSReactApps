@@ -43,6 +43,11 @@ npm init -y
 npm install --save-dev @babel/core babel-loader @babel/cli @babel/preset-env @babel/preset-react
 npm install --save-dev webpack webpack-cli webpack-dev-server
 npm install --save-dev html-webpack-plugin
+
+npm install --save-dev @testing-library/react
+npm install --save-dev @testing-library/jest-dom
+npm install --save-dev @testing-library/user-event
+npm install --save-dev jest-environment-jsdom
 npm install react react-dom 
 ```
 
@@ -100,9 +105,11 @@ root.render(<App/>);
 
 ### 3. Create configuration files
 
-In this step you will create two more files:
+In this step you will create three more files:
  * `.babelrc`
  * `webpack.config.js`
+ * `jest.config.js`
+
 ```json
 {
     "presets": ["@babel/preset-env","@babel/preset-react"]
@@ -148,6 +155,12 @@ module.exports = {
     })
   ]
 };
+```
+
+```js
+module.exports = {
+    testEnvironment: 'jsdom'
+}
 ```
 
 ### 4. Run the webpack development server
