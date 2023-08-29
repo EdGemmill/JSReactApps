@@ -23,8 +23,7 @@ that we can reuse the same component in multiple places, with minor changes.Here
 is an example of a component `Button` using a prop to change the label being
 displayed:
 
-@TODO A more interesting example than a button? Use the Todo, passing an object?
-
+<!-- OMITTED -->
 ```jsx
 // 1. Declaring the component
 const Button = (props) => {
