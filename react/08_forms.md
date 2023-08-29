@@ -1,6 +1,16 @@
 # Forms
 
-<!-- OMITTED -->
+/\*\* EDU @TODO This feels like a lot for one section. I think possibly it would
+be better to split it into multiple. For example, maybe we could have an earlier
+section on handling events in React, such as an `onClick` button. Hard to think
+of anything interesting that could happen with a single button that isn't a
+counter. Maybe a ping/pong server? Or hitting another random API, similar to the
+Joke API used in the `sending_http_requests` section.
+
+RPS GAME!
+
+Additionally, this section could use being made more interactive. Maybe have
+each step as a challenge, with the answer hidden inside a \<details> block \*\*/
 
 ## Objectives
 
@@ -11,6 +21,8 @@ At the end of this section you should be able to:
 - Test-drive a React form component
 
 ## Forms in HTML
+
+For this section, follow along in a React project as you go.
 
 As you've seen before, we can create a form in HTML with `form`, `input` and
 `label` tags:
@@ -36,9 +48,9 @@ operation, specifically:
 - Updating the input element when the user types
 - Submitting the form with a HTTP request, when the user hits submit.
 
-But quite often in React, we want more control over the form ourselves. We want to
-take some of this functionality from the browser, and use JavaScript to achieve
-it instead. For this, we use _controlled components_.
+But quite often in React, we want more control over the form ourselves. We want
+to take some of this functionality from the browser, and use JavaScript to
+achieve it instead. For this, we use _controlled components_.
 
 ## Forms in React
 
@@ -84,8 +96,8 @@ const Form = () => {
 };
 ```
 
-Great! But we want to store the input ourselves. Let's use `useState` to do
-this.
+Great! But we want to store the input ourselves, rather than just let the
+browser handle it. Let's use `useState` to do this.
 
 ```jsx
 const Form = () => {
@@ -249,8 +261,8 @@ const Form = () => {
 
 And voila! Our form is now a controlled component! We have wrestled control of
 the input from the browser, and are handling it ourselves. But the browser still
-has control over submitting the form. We need to be able to submit the form
-from JavaScript instead! And for this we need to use `fetch`.
+has control over submitting the form. We need to be able to submit the form from
+JavaScript instead! And for this we need to use `fetch`.
 
 Fetch takes two arguments: A url, and an object, containing more information
 about the request. A POST request using fetch can be written like this:
@@ -364,8 +376,8 @@ only numbers are allowed in the input, and letters are removed.
 
 ## Bonus:
 
-Use [conditional rendering](../pills/conditional_rendering.md) to display
-an error message if the password that the user enters is less than 8 characters.
+Use [conditional rendering](../pills/conditional_rendering.md) to display an
+error message if the password that the user enters is less than 8 characters.
 
 
 [Next Challenge](09_effects.md)

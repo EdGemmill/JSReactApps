@@ -6,12 +6,6 @@ At the end of this section you should be able to:
  * Explain how we can use JavaScript code to respond to user interactions on the web page
  * Use JavaScript event listeners to run code when the user interacts with the page (e.g clicking on a button)
 
- ## Prerequisites
-This section relies on knowledge of a few topics you have covered before, that you may want to refresh yourself on before you continue, or look back to if there is something here you don't understand. These are:
- * CSS Selectors
- * Anonymous functions
- * Passing functions as arguments
-
 ## On Event listeners
 
 In JavaScript, we can attach what is called an event listener to a DOM element. The "listener" is a function that will be called whenever the event "happens".
@@ -71,17 +65,9 @@ In the current project directory:
 2. Attach an event listener to the button so when it is clicked, TODO data from `jsonplacholder.typicode.com` is loaded
 3. Use the techniques you learned manipulating the DOM to display this TODO to the user.
 
+<!-- OMITTED -->
+
 ## Challenge
-
-The following sequence diagram contains the different components involved in the application written so far. 
-
-Complete the diagram with the missing arrows to indicate the interactions between the components. Make sure that:
- * you label the arrows
- * the arrows are in the correct order (time flows from the top of the diagram to the bottom)
-
-When done, [submit your completed diagram to your coach for feedback](https://airtable.com/shrnql7AaT1eYNJbI?prefill_Item=react_as01).
-
-## Bonus Challenge
 Take your joke code from the previous section, and adapt it so that the punchline to the joke is only shown after the user clicks a button.
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->

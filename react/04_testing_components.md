@@ -9,7 +9,26 @@ At the end of this section you should be able to:
 
 ## Using the Testing Library
 
-@TODO
+We will be using React Testing Library, a library which contains matchers which
+specifically help us to test react components. This contains a number of useful
+functions for us, and more details can be found in the
+[Testing Library Docs](https://testing-library.com/)
+
+#### Queries
+
+Such as `.getByRole` or `.findByText`. More information about these can be found
+here: https://testing-library.com/docs/queries/about#types-of-queries
+
+#### Screen
+
+`screen` allows us to write tests to test the document body. For example, using
+`screen.findByLabelText(name)` will search the whole HTML body for an element
+that has a `name` label attached to it.
+
+#### Render
+
+React Testing Library's `render` method allows us to render specific React
+components, and test against them, without needing to load a whole application.
 
 ## Writing Tests for Components
 
