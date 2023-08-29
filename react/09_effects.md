@@ -64,10 +64,10 @@ There's a few parts to this component, so let's break it down.
 4. We iterate over the `todos` array, producing a `<Todo />` for each element,
    passing the `todoData` as a prop.
 
-Looks good so far? Remember that the `TodoPage` function will run _every time_ the
-state changes. Which means that every time we fetch the data and set the todos,
-we run the function again... meaning we fetch the data again, and set the todos
-again.... meaning we fetch the data again and....
+Looks good so far? Remember that the `TodoPage` function will run _every time_
+the state changes. Which means that every time we fetch the data and set the
+todos, we run the function again... meaning we fetch the data again, and set the
+todos again.... meaning we fetch the data again and....
 
 An infinite loop! Not ideal. In react, we call this a _render loop_.
 
@@ -170,7 +170,19 @@ Perfect!
 
 ## Challenge
 
-@TODO Events page, change
+We have built a very basic backend API which will send a list of events.
+
+You can find the repo for this API here:
+https://github.com/makersacademy/react-gig-backend/tree/main
+
+The API is hosted on render here:
+`https://makers-gig-backend.onrender.com/events`
+
+1. Update your gig application to fetch the list of events from this backend the
+   first time the application is loaded, instead of hard coding them.
+2. While the events are loading, your application should somehow communicate to
+   the user that the data is loading, either through a spinner, or the word
+   "Loading" etc. It is up to you how to display it.
 
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->

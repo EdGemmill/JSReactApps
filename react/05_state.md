@@ -147,7 +147,7 @@ button. This user action changes the state of the component, and we test that
 the component has changed.
 
 ```js
-// file: src/Counter.test.js
+// file: src/Counter.test.jsx
 
 import React from "react";
 import { render, screen } from "@testing-library/react";
@@ -183,7 +183,7 @@ test("renders with a new value of 2 ", async () => {
 ## Exercise
 
 Test-drive the component `Counter` with a new button to **decrement** the
-counter. 
+counter.
 
 <!-- OMITTED -->
 
