@@ -91,7 +91,7 @@ the HTML structure for this component. A component is usually declared in its
 own file.
 
 ```jsx
-// file: src/Post.js
+// file: src/Post.jsx
 
 // We always need to import React when declaring a component
 import React from "react";
@@ -111,7 +111,7 @@ export default Post;
 It can be then imported and added to the root component (`App`):
 
 ```js
-// file: src/App.js
+// file: src/App.jsx
 
 import React from "react";
 import Post from "./Post";
