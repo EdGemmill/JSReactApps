@@ -176,24 +176,23 @@ test("renders with a new value of 2 ", async () => {
 });
 ```
 
-@TODO Improve
-
 > **Note:** We have to use async and await here because React works
-> _asynchronously_. This means we have to wait for the clicks to be completed
-> before moving on.
+> _asynchronously_. This means we have to wait for the react application to
+> finish reacting to our clicks before moving on.
 
 ## Exercise
 
 Test-drive the component `Counter` with a new button to **decrement** the
-counter.
-  <!-- OMITTED -->
+counter. 
+
+<!-- OMITTED -->
 
 # Challenge
 
 Add a button to your Gig component to "favourite" it. Use state to keep track of
 whether each gig has been "favourited", and
-[conditional rendering](../pills/conditional_rendering.md) to indicate which gigs
-have been favourited.
+[conditional rendering](../pills/conditional_rendering.md) to indicate which
+gigs have been favourited.
 
 It's up to you how you want to display the favourite status to the user, and if
 there's any styling you want to use.

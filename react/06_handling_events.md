@@ -5,7 +5,7 @@
 At the end of this section you should be able to:
 
 - Explain how we can write "Event Handlers" to listen to interactivity.
-- Implement a small React app which @TODO
+<!-- OMITTED -->
 
 ## Prerequisites
 
@@ -74,7 +74,7 @@ log to the console everything that is typed into it.
 # Exercise
 
 Using what you learned about state in the previous section, along with the
-`onChange` prop, create a new component `<Die />` to represent rolling a die. It
+`onClick` prop, create a new component `<Die />` to represent rolling a die. It
 should have a button, and when pressed, a new random integer between 1 and 6
 should be generated, stored in state, and presented on the page. Each time the
 button is pressed, a new roll should be presented.

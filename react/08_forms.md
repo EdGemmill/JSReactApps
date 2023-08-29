@@ -1,16 +1,6 @@
 # Forms
 
-/\*\* EDU @TODO This feels like a lot for one section. I think possibly it would
-be better to split it into multiple. For example, maybe we could have an earlier
-section on handling events in React, such as an `onClick` button. Hard to think
-of anything interesting that could happen with a single button that isn't a
-counter. Maybe a ping/pong server? Or hitting another random API, similar to the
-Joke API used in the `sending_http_requests` section.
-
-RPS GAME!
-
-Additionally, this section could use being made more interactive. Maybe have
-each step as a challenge, with the answer hidden inside a \<details> block \*\*/
+<!-- OMITTED -->
 
 ## Objectives
 
