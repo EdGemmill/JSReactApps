@@ -173,7 +173,7 @@ tools, "Components" and "Profiler". You'll use mainly the first one for now.
 
 ## Exercise 1
 
-In a new React project, write a component `Profile` in a file `Profile.js` which
+In a new React project, write a component `Profile` in a file `Profile.jsx` which
 returns the following HTML tree:
 
 ```html
@@ -185,7 +185,7 @@ returns the following HTML tree:
 </div>
 ```
 
-Insert this component in your `App` component tree (in `App.js`), and view the
+Insert this component in your `App` component tree (in `App.jsx`), and view the
 app in a web browser.
 
 ## Exercise 2
