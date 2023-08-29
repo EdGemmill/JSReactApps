@@ -118,6 +118,21 @@ In the example of the Counter, when we update the value from 0 to 1 using
 `setCount()`, React then "knows" it needs to re-render (call) the component, as
 the value of `count` has changed.
 
+Note that because we _re-render_ the component every time we update state, we
+can't mutate the state directly. For example, this code is an _anti-pattern_:
+
+```jsx
+let [count, setCount] = useState(0);
+
+const incrementCounter = () => {
+  count = count + 1;
+};
+```
+
+This is incorrect, because each time the component re-renders, the `count`
+variable will be re-set to whatever `useState` thinks it is. If we haven't used
+`setCount`, it doesn't know that `count` has changed.
+
 ## Exercise
 
 Implement the `Counter` component in your project. Use the React DevTools to
@@ -125,8 +140,6 @@ inspect the state of this component changing as you manually increment the
 counter on the web page.
 
 ## Testing a component with state
-
-@TODO
 
 Testing a component with state follows the same principles. The only difference
 is that we will usually simulate a user action — for example, clicking on a
@@ -173,63 +186,13 @@ test("renders with a new value of 2 ", async () => {
 
 Test-drive the component `Counter` with a new button to **decrement** the
 counter.
-
-## Challenge
-
-@TODO Test-drive a component with state.
-
----
-
-## Advanced - Breaking it down
-
-```jsx
-const Counter = () => {
-  const [count, setCount] = useState(0);
-
-  // First render - count is 0
-
-  const incrementCounter = () => {
-    setCount(count + 1);
-  };
-
-  return (
-    <div>
-      <h1>{count}</h1>
-      <button onClick={incrementCounter}>Increment the counter</button>
-    </div>
-  );
-};
-```
-
-After `setCount(0 + 1)` is called, `state` takes the new value 1:
-
-```jsx
-const Counter = () => {
-  const [count, setCount] = useState(0);
-
-  // Render after button is clicked
-  // count is now 1
-
-  const incrementCounter = () => {
-    setCount(count + 1);
-  };
-
-  return (
-    <div>
-      <h1>{count}</h1>
-      <button onClick={incrementCounter}>Increment the counter</button>
-    </div>
-  );
-};
-```
-
-<!-- OMITTED -->
+  <!-- OMITTED -->
 
 # Challenge
 
 Add a button to your Gig component to "favourite" it. Use state to keep track of
 whether each gig has been "favourited", and
-[conditional rendering](../pills/conditional_rendering.md) to show which gigs
+[conditional rendering](../pills/conditional_rendering.md) to indicate which gigs
 have been favourited.
 
 It's up to you how you want to display the favourite status to the user, and if
