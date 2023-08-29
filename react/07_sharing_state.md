@@ -104,6 +104,16 @@ const Counter = () => {
 And there we have it! We are now sharing state between two components. We can
 use this method to keep our components small and easy to handle.
 
+`CountDisplay` and `CountButton` are both depending on state which has been
+"lifted" into a parent component.
+
+## Challenge
+
+Update your gig application so that the `Gig` component doesn't have any state
+of its own. Instead, "lift" the state of the gigs into a parent component. Write
+some code so that instead of listing all gigs together, "favourited" gigs are
+above other gigs.
+
 
 [Next Challenge](08_forms.md)
 

@@ -68,7 +68,8 @@ in a gamepad! 🎮 But in this guidance, we'll stick to clicks.
 
 In the current project directory:
 1. Create an HTML button
-2. Attach an event listener to the button so when it is clicked, the TODO data is loaded
+2. Attach an event listener to the button so when it is clicked, TODO data from `jsonplacholder.typicode.com` is loaded
+3. Use the techniques you learned manipulating the DOM to display this TODO to the user.
 
 ## Challenge
 
