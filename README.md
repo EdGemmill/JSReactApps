@@ -1,10 +1,11 @@
 # JavaScript and React
 
 In this module you will learn to:
- * Use the JavaScript language in a web browser 
- * Explain how Promises can be used to handle asynchronous operations
- * Explain and diagram the behaviour of a React application in a web browser
- * Test-drive a small frontend application using the React library
+
+- Use the JavaScript language in a web browser
+- Explain how Promises can be used to handle asynchronous operations
+- Explain and diagram the behaviour of a React application in a web browser
+- Test-drive a small frontend application using the React library
 
 ## Sequence
 
@@ -12,38 +13,46 @@ Work through the following challenges in sequence.
 
 ### Phase 1 - JavaScript bites
 
-This phase will help you get "just enough"  understanding of how JavaScript is run in a web browser.
+This phase will help you get "just enough" understanding of how JavaScript is
+run in a web browser.
 
 1. [Running JavaScript in the browser](./javascript_bites/01_running_js_in_browser.md)
-2. [Getting visibility](./javascript_bites/02_getting_visibility_ed.md)
+2. [Manipulating the DOM](./javascript_bites/02_manipulating_the_dom.md)
 3. [Sending HTTP requests](./javascript_bites/03_sending_http_requests.md)
+4. [Event listeners](./javascript_bites/04_event_listeners.md)
 
-<!-- OMITTED -->
+\*\* EDU
 
-### Phase 2 - Webpages
+(This sequence would be used if learners didn't do any JS before.)
 
-This phase will help you get "just enough"  understanding on how JavaScript can be used to dynamically update an HTML document.
+If you're already familiar with some of all of the concepts covered below, feel
+free to skip part of all of this phase. Let your coach know about this.
 
-1. [HTML pages](./webpages/01_html_pages.md)
-2. [Manipulating the DOM](./webpages/02_manipulating_the_dom.md)
-3. [Event listeners](./webpages/03_event_listeners.md)
+4. [Functions]
+5. [Conditionals]
+6. [Loops]
+7. [Functions as values]
+8. [Promises]
+9. [Arrays]
+10. [Objects]
+11. [Array operations] \*\*
 
-### Phase 3 - React
+### Phase 2 - React
 
-This phase will help you to learn how to test-drive simple React components, and to get a basic mental model of how React works.
+This phase will help you to learn how to test-drive simple React components, and
+to get a basic mental model of how React works.
 
 1. [Setting up a React project](./react/01_setting_up_project.md)
 2. [Components](./react/02_components.md)
 3. [Props](./react/03_props.md)
 4. [Testing components](./react/04_testing_components.md)
 5. [State](./react/05_state.md)
-6. [Forms](./react/06_forms.md)
+6. [Handling events](./react/06_handling_events.md)
 7. [Sharing state](./react/07_sharing_state.md)
-8. [Effects](./react/08_effects.md)
+8. [Forms](./react/08_forms.md)
+8. [Effects](./react/09_effects.md)
 
-### Phase 3 - Advanced React
 
-@TODO
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

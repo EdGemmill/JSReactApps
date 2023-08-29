@@ -1,9 +1,15 @@
 # Setting up a React project
 
+<!-- OMITTED -->
+
 ## Objectives
 
 At the end of this section you should be able to:
  * Setup a new React project and use it in your web browser
+
+## Prerequisites
+This section relies on knowledge of a few topics you have covered before, that you may want to refresh yourself on before you continue, or look back to if there is something here you don't understand. These are:
+ * Using NPM to install dependencies
 
 ## Using the starter codebase
 
@@ -172,6 +178,20 @@ Run the following command:
 ```
 
 It should open a new browser tab at `http://localhost:5000` with your application running.
+
+### Why so many files?
+
+In the end, what is read and interpreted by the browser to display and run the final web application is only:
+ * the HTML document
+ * the JavaScript code bundled by `webpack` (you can have a look at the generated file `http://localhost:5000/bundle.js` if you're curious)
+
+So why do we need so many files in our project?
+
+The answer is that, for the React library to function, we need a few different libraries and software tools. For example, the JSX syntax (which allows mixing of HTML and JavaScript code in the same file) cannot be read natively by web browsers, so we need a tool to translate or "transpile" the source JSX code to JavaScript code that is readable by the browser.
+
+This is one of the jobs of the `babel` and `webpack` libraries, for example. The different configuration files are needed for these tools to behave correctly to produce the final web application (the "build").
+
+Most modern JavaScript projects will implement some kind of tool chain including similar tools, if not more. You do not need to know in details how every tool in your tool chain work to build your application (in fact, most engineers using them don't!).
 
 [Next Challenge](02_components.md)
 

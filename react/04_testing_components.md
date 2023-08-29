@@ -1,10 +1,11 @@
-# Test-driving components
+# Testing components
 
 ## Objectives
 
 At the end of this section you should be able to:
- * Write a unit test for an existing component
- * Test-drive a new component having props
+
+- Write a unit test for an existing component
+- Test-drive a new component having props
 
 ## Using the Testing Library
 
@@ -12,49 +13,61 @@ At the end of this section you should be able to:
 
 ## Writing Tests for Components
 
-When testing "manually" (as a human) your web application, you will usually follow the same process intuitively:
- * Opening the web application
- * Maybe doing something, like clicking on a button, or filling a form
- * Then verifying that the page looks like it should (it "works" or it doesn't)
+When testing "manually" (as a human) your web application, you will usually
+follow the same process intuitively:
+
+- Opening the web application
+- Maybe doing something, like clicking on a button, or filling a form
+- Then verifying that the page looks like it should (it "works" or it doesn't)
 
 Most of the automated tests for components will follow a same structure:
- * Setup — rendering a component using the built-in `render` function.
- * Doing something — simulating a click on a button, or something different.
- * Asserting the web page has a certain element or some specific content.
+
+- Setup — rendering a component using the built-in `render` function.
+- Doing something — simulating a click on a button, or something different.
+- Asserting the web page has a certain element or some specific content.
 
 ```js
 // file: src/App.test.js
 
-import React from 'react'
-import {render, screen} from '@testing-library/react'
-import '@testing-library/jest-dom'
-import Profile from './Profile'
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import Profile from "./Profile";
 
-test('renders with the correct title ', () => {
-    // Setup - rendering the component on the page
-    render(<Profile />)
+test("renders with the correct title ", () => {
+  // Setup - rendering the component on the page
+  render(<Profile />);
 
-    // Assert
-    expect(screen.getByRole("heading")).toHaveTextContent('Quackie Makers')
+  // Assert
+  expect(screen.getByRole("heading")).toHaveTextContent("Quackie Makers");
 });
 ```
 
-## Exercise
+## Exercise 1
 
-Write at least two tests for the `Profile` component created in the previous sections.
+Write at least two tests for the `Profile` component created in the previous
+sections.
 
-## Challenge
+## Exercise 2
+
+Re-implement the `Profile` component, this time test-driving it (write the test
+first, see it fail, then write the component code).
+
+## Exercise 3
 
 Test-drive and implement a new component `Recipe`, having three props:
 
 ```jsx
-<Recipe
-    title="Finnish cinammon buns"
-    type="dessert"
-    duration={60} />
+<Recipe title="Finnish cinammon buns" type="dessert" duration={60} />
 ```
 
-You're free to choose the final HTML structure for this component, as long as your test uses correct assertions for it. 
+You're free to choose the final HTML structure for this component, as long as
+your test uses correct assertions for it.
+
+## Challenge
+
+Write a test for the Gig component from the previous section, making sure that
+all the information passed as props is displayed on the page.
 
 
 [Next Challenge](05_state.md)

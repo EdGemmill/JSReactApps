@@ -3,28 +3,29 @@
 ## Objectives
 
 At the end of this section you should be able to:
- * Explain that a React component is a reusable piece of user interface
- * Implement a React component by writing a function returning a tree of HTML
-   tags, and add it to your React app
- * Implement a React component rendering another component (parent-child)
+
+- Explain that a React component is a reusable piece of user interface
+- Implement a React component by writing a function returning a tree of HTML
+  tags, and add it to your React app
+- Implement a React component rendering another component (parent-child)
 
 ## What is component?
 
-When building a webpage in HTML, we think of it as made of HTML tags:
+In HTML, we build webpages out of tags:
 
 ```html
 <body>
-    <h1>Welcome to your feed</h1>
-    <div id="feed">
-        <div class="post">
-            <p>A first post</p>
-            <p class="posted-at">Posted last week</p>
-        </div>
-        <div class="post">
-            <p>Another post</p>
-            <p class="posted-at">Posted last month</p>
-        </div>
+  <h1>Welcome to your feed</h1>
+  <div id="feed">
+    <div class="post">
+      <p>A first post</p>
+      <p class="posted-at">Posted last week</p>
     </div>
+    <div class="post">
+      <p>Another post</p>
+      <p class="posted-at">Posted last month</p>
+    </div>
+  </div>
 </body>
 ```
 
@@ -43,13 +44,20 @@ body
             p.posted-at
 ```
 
+> **Note:** We are using _CSS selector_ syntax here, ie. `tag`, `tag.class`,
+> `tag#id`
+>
+> You can read more in
+> [this pill](../pills/manipulating_dom_with_javascript.md) or MDN's
+> [CSS selector docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors).
+
 When building with React, we think of the page as made of components. Components
 are reusable pieces of user interface, and they can be made of many HTML tags.
 Here's an example of the same webpage, when "translated" to components:
 
 ```jsx
 <App>
-    <Title title="Welcome to your feed" /> 
+    <Title title="Welcome to your feed" />
     <Feed>
         <Post title="A first post">
         <Post title="Another post">
@@ -89,16 +97,15 @@ own file.
 import React from "react";
 
 const Post = () => {
+  return (
+    <div className="post">
+      <p>A first post</p>
+      <p className="posted-at">Posted last week</p>
+    </div>
+  );
+};
 
-    return (
-        <div className="post">
-            <p>A first post</p>
-            <p className="posted-at">Posted last week</p>
-        </div>
-    )
-}
-
-export default Post
+export default Post;
 ```
 
 It can be then imported and added to the root component (`App`):
@@ -109,16 +116,14 @@ It can be then imported and added to the root component (`App`):
 import React from "react";
 import Post from "./Post";
 
-const App = () =>{
-    return (
-        <Post />
-    )
-}
+const App = () => {
+  return <Post />;
+};
 ```
 
 The reason we can mix HTML and JavaScript in the same files is because React
-uses a special version of JavaScript, called **JSX**, in which it is perfectly
-valid to write HTML tags (following a few rules, which you'll learn about
+uses an extended version of JavaScript, called **JSX**, in which it is perfectly
+valid to write HTML-style tags (following a few rules, which you'll learn about
 later).
 
 ## Rendering
@@ -136,55 +141,84 @@ We can break the process down in the following steps:
 
 ```jsx
 // 2 - Component is called (the function is called)
-
-Post() // returns <div class="post">(...)</div>
+Post(); // returns <div class="post">(...)</div>
 ```
 
 ```jsx
 // 3 - The returned HTML is inserted in the webpage
 <div class="post">
-    <p>A first post</p>
-    <p class="posted-at">Posted last week</p>
+  <p>A first post</p>
+  <p class="posted-at">Posted last week</p>
 </div>
 ```
 
 We say that React **renders** the component on the page.
 
-Note: in this module, we will sometimes mention component names using their name
-only (such as `Feed`) or using tag-like syntax, with chevrons (`<Feed />`). They
-will refer to the same thing — the component.
+This doesn't happen just once. Whenever we change some data which would change
+what a component looks like, the component **re-renders**, meaning the function
+runs again. We'll get into more detail about this later in the module.
+
+> **Note:** in this module, we will sometimes mention component names using
+> their name only (such as `Feed`) or using tag-like syntax, with chevrons
+> (`<Feed />`). They will refer to the same thing — the component.
 
 ## Using the React Developer Tools
 
-[You should install the React Developer Tools for your web
-browser](https://beta.reactjs.org/learn/react-developer-tools), as they'll be
-really helpful into getting visibility in your React components and debugging
-them.
+[You should install the React Developer Tools for your web browser](https://beta.reactjs.org/learn/react-developer-tools),
+as they'll be really helpful into getting visibility in your React components
+and debugging them.
 
-After installing it, you should see two new tabs in your browser Developer tools, "Components" and "Profiler". You'll use mainly the first one for now.
+After installing it, you should see two new tabs in your browser Developer
+tools, "Components" and "Profiler". You'll use mainly the first one for now.
 
-
-
-## Exercise
+## Exercise 1
 
 In a new React project, write a component `Profile` in a file `Profile.js` which
 returns the following HTML tree:
 
 ```html
 <div id="profile">
-    <h1 id="name">Quackie Makers</h1>
+  <h1 id="name">Quackie Makers</h1>
 
-    <p id="job">Makers' favourite rubber duck</p>
-    <p id="birthdate">2013</p>
+  <p id="job">Makers' favourite rubber duck</p>
+  <p id="birthdate">2013</p>
 </div>
 ```
 
 Insert this component in your `App` component tree (in `App.js`), and view the
 app in a web browser.
 
-## Exercise
+## Exercise 2
 
-Use the React Developer tools to inspect the component in the app component tree.
+Use the React Developer tools to inspect the component in the app component
+tree.
+
+## Challenge
+
+Over the course of the next few challenges we're going to build a react-based
+gig-listing website. As we go, please feel free to add your own touches and
+style to the page, either by adding extra functionality, or with CSS files.
+
+1. Follow the instructions on the
+   [Makers React Template](https://github.com/makersacademy/react-template) to
+   create a new project for our gig-listing site.
+2. Create a component called `Gig`, which contains information about a gig on
+   the website. It should contain:
+
+   1. A `h3` (heading) element listing the name of the band
+   2. A `img` (image) element for an image of the band, using the `src`
+      attribute to link to an image.
+   3. A `p` (paragraph) element containing a description of the event
+   4. A `p` element containing the time and date of the event
+   5. A `p` element containing the location of the event
+
+   You can come up with the event details yourself.
+
+3. Render this component as a child of the `App` component.
+4. Each element should have a descriptive `className` attached.
+5. The component should import a `Gig.css` file. Add some styling based on the
+   class names you gave your elements to make it look nice.
+
 
 [Next Challenge](03_props.md)
 
