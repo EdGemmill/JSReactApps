@@ -91,21 +91,7 @@ users of the application**
 4. Instead of printing to the developer console, use JavaScript's `alert`
    function to display a message to the user.
 
-\*\* EDU
-
-## Learners experience
-
-Learners will:
-
-- See a demonstration (written and/or video) on how to create an HTML page which
-  loads a JS file
-- See a demonstration (written and/or video) on how to use `console.log` and the
-  browser dev console to get visibility into a program.
-- Work on an exercise to create an HTML file and load a JS file from it (this
-  file would log something in the console). They'll have to use the browser
-  console to see the console output.
-
-\*\*
+<!-- OMITTED -->
 
 
 [Next Challenge](02_manipulating_the_dom.md)

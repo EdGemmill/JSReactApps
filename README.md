@@ -21,21 +21,7 @@ run in a web browser.
 3. [Sending HTTP requests](./javascript_bites/03_sending_http_requests.md)
 4. [Event listeners](./javascript_bites/04_event_listeners.md)
 
-\*\* EDU
-
-(This sequence would be used if learners didn't do any JS before.)
-
-If you're already familiar with some of all of the concepts covered below, feel
-free to skip part of all of this phase. Let your coach know about this.
-
-4. [Functions]
-5. [Conditionals]
-6. [Loops]
-7. [Functions as values]
-8. [Promises]
-9. [Arrays]
-10. [Objects]
-11. [Array operations] \*\*
+<!-- OMITTED -->
 
 ### Phase 2 - React
 

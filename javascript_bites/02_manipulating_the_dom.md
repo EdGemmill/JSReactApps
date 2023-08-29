@@ -119,18 +119,7 @@ the web page a second recipe, which includes:
   - `title` - a string representing the title of the recipe
   - `steps` - an array of strings representing the steps in the recipe
 
-\*\* EDU
-@TODO - Which order should DOM & Fetch be in? Maybe this challenge could come at
-the end, with a button to trigger?
-
-## Challenge
-
-Use `fetch` to do a HTTP request to the joke API:
-`https://official-joke-api.appspot.com/random_joke`
-
-Instead of using `console.log` to print the joke to the console, use
-`createElement` and `appendChild` to display the joke on the page.
-\*\*
+<!-- OMITTED -->
 
 
 [Next Challenge](03_sending_http_requests.md)
