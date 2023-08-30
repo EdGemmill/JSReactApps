@@ -24,6 +24,7 @@ is an example of a component `Button` using a prop to change the label being
 displayed:
 
 <!-- OMITTED -->
+
 ```jsx
 // 1. Declaring the component
 const Button = (props) => {
@@ -42,8 +43,10 @@ Props are passed to a component as attributes, similar to HTML attributes.
 ```
 
 ```jsx
-// We can also use more than one lines for readability
-<Post title="A random post" postedAt="Yesterday" />
+<Post // We can also use more than one line for readability
+  title="A random post"
+  postedAt="Yesterday"
+/>
 ```
 
 In the component function, props are given as an argument, and is an object
