@@ -62,6 +62,10 @@ test("renders with the correct title ", () => {
 });
 ```
 
+> **Note:** The example above won't work as it is, because we currently aren't
+> passing any props to the Profile component. Can you update the Setup part of
+> the test so that it passes the assertion?
+
 ## Exercise 1
 
 Write at least two tests for the `Profile` component created in the previous
