@@ -46,7 +46,7 @@ Most of the automated tests for components will follow a same structure:
 - Asserting the web page has a certain element or some specific content.
 
 ```js
-// file: src/App.test.jsx
+// file: src/Profile.test.jsx
 
 import React from "react";
 import { render, screen } from "@testing-library/react";

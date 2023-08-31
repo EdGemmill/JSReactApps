@@ -173,8 +173,8 @@ tools, "Components" and "Profiler". You'll use mainly the first one for now.
 
 ## Exercise 1
 
-In a new React project, write a component `Profile` in a file `Profile.jsx` which
-returns the following HTML tree:
+In a new React project, write a component `Profile` in a file `Profile.jsx`
+which returns the following HTML tree:
 
 ```html
 <div id="profile">
@@ -196,8 +196,10 @@ tree.
 ## Challenge
 
 Over the course of the next few challenges we're going to build a react-based
-gig-listing website. As we go, please feel free to add your own touches and
-style to the page, either by adding extra functionality, or with CSS files.
+gig-listing website. I recommend keeping this project in a separate repo from
+the other exercises you'll be doing in this module. As we go, please feel free
+to add your own touches and style to the page, either by adding extra
+functionality, or with CSS files.
 
 1. Follow the instructions on the
    [Makers React Template](https://github.com/makersacademy/react-template) to
