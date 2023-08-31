@@ -83,7 +83,7 @@ const CountDisplay = (props) => {
 
 const CountButton = (props) => {
   const incrementCounter = () => {
-    props.setCount(count + 1);
+    props.setCount(props.count + 1);
   };
 
   return <button onClick={incrementCounter}>Increment the counter</button>;
@@ -95,7 +95,7 @@ const Counter = () => {
   return (
     <div>
       <CountDisplay count={count} />
-      <CountButton setCount={setCount} />
+      <CountButton setCount={setCount} count={count} />
     </div>
   );
 };
