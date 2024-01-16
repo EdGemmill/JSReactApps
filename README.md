@@ -21,7 +21,6 @@ run in a web browser.
 3. [Sending HTTP requests](./javascript_bites/03_sending_http_requests.md)
 4. [Event listeners](./javascript_bites/04_event_listeners.md)
 
-<!-- OMITTED -->
 
 ### Phase 2 - React
 
@@ -36,7 +35,7 @@ to get a basic mental model of how React works.
 6. [Handling events](./react/06_handling_events.md)
 7. [Sharing state](./react/07_sharing_state.md)
 8. [Forms](./react/08_forms.md)
-8. [Effects](./react/09_effects.md)
+9. [Effects](./react/09_effects.md)
 
 
 

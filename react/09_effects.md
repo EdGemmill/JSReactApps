@@ -17,7 +17,7 @@ there is something here you don't understand. These are:
 - HTTP Requests in JavaScript (fetch)
 - Component Rendering
 
-## Render Loops
+## The Problem - Render Loops
 
 Whenever we **render** a component, we run its function. As a rule of thumb, we
 **re-render** a component _every time_ its _props_ or _state_ change.
@@ -26,23 +26,35 @@ This is good for updating the contents or appearance of a component, but it
 poses a challenge if we want to do HTTP requests to a server. Consider this
 component:
 
-<!-- OMITTED -->
+> **Note:** If you'd like to try running this code, you can use this `<Todo />` component. Remember to pass the `TodoList` a `tag` prop.
 
-(If you'd like to try running this code, you can use the `<Todo />` component
-from earlier in the module. Remember to pass the `TodoList` a `tag` prop!)
 
+<details>
+<summary>Tag Component</summary>
 ```jsx
+const Todo = (props) => {
+  return (
+    <div>
+      <h3 className="todo-title">{props.title}</h3>
+      <p className="todo-done">Done: {props.done}</p>
+    </div>
+  )
+}
+```
+</details>
+
+
 const TodoList = (props) => {
   const [todos, setTodos] = useState([]);
 
-  const URL = `http://todoServer.com/tagged/${props.tag}`;
+  const URL = `https://makers-todo-list-server.onrender.com/tagged/${props.tag}`;
   fetch(URL)
     .then((res) => res.json())
     .then((data) => setTodos(data));
 
   return (
     <>
-      <h2>Todos List:</h2>
+      <h2>TODO List:</h2>
       <div className="todo-list">
         {todos.map((todoData) => (
           <Todo data={todoData} />
@@ -59,7 +71,7 @@ There's a few parts to this component, so let's break it down.
    empty array.
 2. We build a URL based off of the component's `props`. This allows us to fetch
    only the todos with a specific tag.
-3. We _fetch_ the list of todos from our server, parse the JSON response, and
+3. We `fetch` the list of todos from our server, then parse the JSON response, then
    use `setState` to update the state.
 4. We iterate over the `todos` array, producing a `<Todo />` for each element,
    passing the `todoData` as a prop.
@@ -78,7 +90,7 @@ component is rendered. To do this, we can use a built-in react function called
 `useEffect`.
 
 > **Note:** `useEffect` and `useState` are known as _hooks_. You don't need to
-> worry too much about the details now, but by convention, react hooks always
+> worry too much about the details now, but by convention, React hooks always
 > start with the word "use".
 
 The `useEffect` function takes two arguments:
@@ -114,7 +126,7 @@ const TodoList = (props) => {
 
   return (
     <>
-      <h2>Todos List:</h2>
+      <h2>TODO List:</h2>
       <div className="todo-list">
         {todos.map((todoData) => (
           <Todo data={todoData} />
@@ -129,7 +141,9 @@ Now, our `fetch` will only run once, the first time this component is loaded.
 Once the data comes back, it will update the state, and display the todos on the
 page.
 
-<!-- OMITTED -->
+> **Note:** ESLint sometimes complains about using an empty dependency array. 
+> You're welcome to look up the reasoning behind this, but you can use the
+> comment `// eslint-disable-next-line` to ignore it for now.
 
 ## Exercise
 
@@ -170,20 +184,20 @@ Perfect!
 
 ## Challenge
 
-We have built a very basic backend API which will send a list of events.
-
-You can find the repo for this API here:
-https://github.com/makersacademy/react-gig-backend/tree/main
+We have built a basic backend API which will send a list of events.
 
 The API is hosted on render here:
 `https://makers-gig-backend.onrender.com/events`
 
-1. Update your gig application to fetch the list of events from this backend the
+1. Use a tool like Postman or CURL to send requests and explore this API.
+2. Update your gig application to fetch the list of events from this backend the
    first time the application is loaded, instead of hard coding them.
-2. While the events are loading, your application should somehow communicate to
+3. While the events are loading, your application should somehow communicate to
    the user that the data is loading, either through a spinner, or the word
    "Loading" etc. It is up to you how to display it.
 
+> **Note:** This app is being hosted using the free version of Render, so may take
+> up to 30 seconds to respond if it hasn't been used for a while.
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

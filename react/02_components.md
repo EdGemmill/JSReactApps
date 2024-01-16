@@ -197,9 +197,9 @@ tree.
 
 Over the course of the next few challenges we're going to build a react-based
 gig-listing website. I recommend keeping this project in a separate repo from
-the other exercises you'll be doing in this module. As we go, please feel free
-to add your own touches and style to the page, either by adding extra
-functionality, or with CSS files.
+the other exercises you'll be doing in this module. As we go, please add your
+own touches and style to the page, either by adding extra functionality, or with
+CSS files.
 
 1. Follow the instructions on the
    [Makers React Template](https://github.com/makersacademy/react-template) to
